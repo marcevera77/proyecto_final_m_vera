@@ -1,0 +1,152 @@
+// extend
+.texto-pie{
+    font-family: $fontSecondary;
+    
+    
+}
+
+.texto-cuerpo{
+   @extend .texto-pie;
+   font-weight:400 ;
+   line-height: 2.5rem;
+   color: $cuartoColor;
+   font-size:$textMd;
+}
+
+
+// mixin
+@mixin selector1 ( $width, $height, $overflow, $margin, $padding, $box-sizing) {
+    width:$width;
+    height:$height;
+    overflow:$overflow;
+    margin:$margin;
+    padding:$padding;
+    box-sizing:$box-sizing;
+    
+}
+
+
+
+h1,h2,h3{
+    font-family: $fontMain;
+    margin: 10px 0;
+}
+h1{
+    font-size: $textXl
+}
+
+h2{
+    font-size: $textLg
+}
+
+h3{
+    font-size: $textMd
+}
+
+
+#cuerpo{
+    background-image: $secondaryColor;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;  
+      
+}
+#botonera{
+     background-color: $mainColor;
+     
+}
+#botonera a{
+    margin-right: 10px;
+    margin-top: 0;
+    padding:10px 10px;
+    box-sizing: border-box ;  
+}    
+
+#botonera ul li{
+    
+    list-style: none; 
+    display:inline-block;
+    margin-right: 10px;
+    margin-top: 0px;    
+    box-sizing: border-box;
+}
+
+#botonera ul li a{
+    color: black;
+    font-family: $fontMain;
+    text-decoration: none;
+    font-size: $textSm;
+    
+}  
+
+#botonera ul li a:hover{
+    color: black;
+    font-weight: 600;
+}
+
+#cuerpo_error{
+    background-color:$quintoColor;
+  
+}
+
+#cuerpo_error {
+    color: rgb(165, 79, 79);
+    font-family: $fontSecondary;
+    text-decoration: none;
+    font-size: $textSm;
+}
+
+
+/* selectores de etiquetas */
+
+#selector1 div{
+    @include selector1( 100%, auto, 0, auto, 30px 10px, border-box)
+    
+}
+
+#selector1 div p{
+    @include selector1( 100%, auto, 0, auto, 30px 10px, border-box)
+       
+} 
+
+
+#pie p{
+    text-decoration: none;
+    font-size:$textSm; 
+    font-weight: 600;
+}  
+
+#pie a{ 
+    width: 10px;
+    height: 10px;  
+    padding: 30px;
+}
+
+#pie a img{
+    width: 50px; 
+    font-display:inline-block;
+    
+}
+
+/* selectores de clases */
+
+.text-center{
+    text-align: center;
+}
+
+.text-rigth{
+    text-align: right;
+}
+
+.text-left{
+    text-align: left;
+}
+
+/* first letter */
+p:first-letter{
+    color: $cuartoColor;
+    font-size: $textLg;
+    font-weight: 600;
+    margin-right: 3px;
+
+}
